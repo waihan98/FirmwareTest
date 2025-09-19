@@ -25,8 +25,8 @@ typedef struct
 
 typedef struct
 {
-    uint32_t        stationID;          //UID of Robot
-    stationStatus   status;             //Status of Robot
+    uint32_t        stationID;          //UID of Station
+    stationStatus   status;             //Status of Station
     uint32_t        reservedID;         //Reserved by Robot
 }station;
 
