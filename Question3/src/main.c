@@ -13,6 +13,20 @@ enum PUSH_BUTTON{
     PB_2,
 };
 
+typedef struct {
+    uint8_t activeStatus;               //active high or low
+    uint16_t intervalStatus;            //interval level
+    uint8_t state;                      //current state
+}LEDstruct;
+
+typedef struct  {
+    uint8_t activeStatus;               //active high or low
+    uint8_t lastState;                      //current state
+    uint8_t triggerType                 //Edge or Level trigger
+    uint16_t debounce                   //set debounce delay
+    uint32_t lastPressTime              //last pressed
+}PBStruct;
+
 int set_led(enum LED led_number, uint16_t interval);
 int set_push_button(enum PUSH_BUTTON push_button, void (*callback_func)(void));
 void led_app(void);
